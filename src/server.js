@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors';
 import routerUsuarios from './router/usuario_routes.js'
 
 // Inicializaciones
@@ -8,6 +9,8 @@ dotenv.config()
 
 // Configuraciones 
 app.set('port',process.env.PORT || 3000)
+app.use(cors())
+
 
 // Middlewares 
 app.use(express.json())
