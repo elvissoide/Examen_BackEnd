@@ -1,5 +1,7 @@
 import app from './server.js'
+import connection from './database.js';
 
-app.listen(3000,()=>{
-    console.log(`Servidor desplegado en el puerto ${3000}`);
+connection()
+app.listen(app.get('port'),()=>{
+    console.log(`Server ok on http://localhost:${app.get('port')}`);
 })
