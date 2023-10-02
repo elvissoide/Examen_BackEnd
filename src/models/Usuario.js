@@ -30,15 +30,4 @@ usuarioSchema.methods.matchPassword = function (password) {
     return passwordsMatch;
 };
 
-// Método para crear un token 
-// usuarioSchema.methods.crearToken = function () {
-//     const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     let token = '';
-//     for (let i = 0; i < 10; i++) {
-//         const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
-//         token += caracteres.charAt(indiceAleatorio);
-//     }
-//     return token;
-// }
-
 export default model('Usuario', usuarioSchema)
