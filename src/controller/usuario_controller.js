@@ -20,6 +20,8 @@ const login = async(req,res)=>{
     const verificarPassword = await usuarioBDD.matchPassword(password)
     if(!verificarPassword) return res.status(404).json({msg:"Lo sentimos, el password no es el correcto"})
     const token = crearToken();
+    usuarioBDD.token = nuevoToken;
+    await usuarioBDD.save();
     const {nombre,apellido,_id} = usuarioBDD
     res.status(200).json({
         token,
