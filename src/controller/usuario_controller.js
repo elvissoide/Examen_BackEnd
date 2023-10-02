@@ -1,5 +1,4 @@
 import Usuario from "../models/Usuario.js";
-import mongoose from "mongoose";
 
 function crearToken () {
     const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

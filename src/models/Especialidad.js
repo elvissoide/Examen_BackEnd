@@ -15,4 +15,4 @@ const especialidadSchema = new Schema({
     timestamps: true
 })
 
-export default model('Usuario', usuarioSchema)
+export default model('Especialidad', especialidadSchema)
